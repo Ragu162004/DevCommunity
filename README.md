@@ -9,7 +9,6 @@ Welcome to **DevCommunity**, a platform where users can share their innovative d
 
 ### 1. **Idea**
 - [Idea of DevCommunity](./docs/IDEA_README.md)
-- Describes the platform's screen structure and user navigation paths.
 
 ### 2. **Page Guide**
 - [Module Description](./docs/PAGES_README.md)
