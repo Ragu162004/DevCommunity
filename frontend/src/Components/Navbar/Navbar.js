@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './Navbar.module.css'
-import { logoIcon, bellIcon,userIcon } from '../../assets/index.js';
-import { NavItem } from '../../Containers/index';
+import { logoIcon } from '../../assets';
+import { NavItem } from '../../Containers';
+import { PiUser } from "react-icons/pi";
+import { CiBellOn } from "react-icons/ci";
 
 const Navbar = () => {
   return (
@@ -9,8 +11,10 @@ const Navbar = () => {
         <div className={styles.navbar}>
             <img src={logoIcon} alt="logo" className={styles.logo}/>
             <NavItem />
-            <img src={bellIcon} alt="notification" className={styles.bell} />
-            <img src={userIcon} alt="user" className={styles.user} />
+            <div className={styles.config}>
+              <CiBellOn className={styles.bell}/>
+              <PiUser className={styles.user}/>
+            </div>
         </div>
     </>
   )

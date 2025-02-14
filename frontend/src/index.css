@@ -1,5 +1,8 @@
 :root {
   --bg-color: #121212;
+  --emoji-color: #f0f0f0;
+  --text-color: #ffffff;
+  --funky-style: 'Comic Sans MS', cursive, sans-serif;
 }
 
 
@@ -11,9 +14,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-color);
+  box-sizing: border-box;
+  font-family: var(--funky-style);
+  font-size: 1.1rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+li{
+  list-style-type: none;
+} 
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
 }
