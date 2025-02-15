@@ -1,0 +1,62 @@
+.welcomeText {
+    color: var(--text-color);
+}
+
+
+
+/* NewsLetter styles */
+.newsLetter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .newsLetterBox {
+            background-color: #f5f5f5;
+            padding: 20px;
+            width: 25vw;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            outline: none;
+            border: none;
+    }
+    .newsLetterIcon {
+        background-color: #f5f5f5;
+        border: none;
+        color: #000;
+        padding: 19px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+
+        &:hover {
+            color: #000;
+            border-radius: 15px 10px 25px;
+        }
+    }
+}
+
+/* Explore Button Styles */
+
+
+.exploreButton { 
+    background-color: var(--button-color);
+    border: none;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    &:hover {
+        color: #000;
+        border-radius: 10px 25px;
+    }
+}
