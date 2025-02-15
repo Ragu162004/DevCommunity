@@ -5,9 +5,9 @@ const WelcomeText = () => {
 return (
     <>
         <p className={styles.welcomeText}>
-            <strong>"Unlock your potential—take assessments and match your skills </strong>
+            "Share your innovative designs and ideas with the community
             <br />
-            <strong>to company-specific job requirements in just a few clicks!"</strong>
+            and get feedback from fellow creators!"
         </p>
     </>
 )

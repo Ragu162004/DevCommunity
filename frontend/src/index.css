@@ -1,5 +1,6 @@
 :root {
-  --bg-color: #121212;
+  /* --bg-color: #121212; */
+  --bg-color: #040421;
   --button-color: #f5f5f5;
   --emoji-color: #f0f0f0;
   --text-color: #ffffff;
@@ -28,9 +29,9 @@ code {
 }
 
 
-li{
+li {
   list-style-type: none;
-} 
+}
 
 a {
   text-decoration: none;

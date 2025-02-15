@@ -1,7 +1,7 @@
 .heroSection {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     padding: 10vh;
     background: var(--bg-color);
@@ -9,23 +9,63 @@
     background-position: center;
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    .container {
-            text-align: left;
-        }
-    
-        .container h1 {
-            font-size: 3rem;
-            color: var(--text-color);
-            text-align: left;
-            margin-bottom: 1rem;
-            transition: color 0.3s ease;
-        }
-    
-        .container h1:hover {
-            color: var(--highlight-color);
-        }
-        .container h1 span {
-            font-size: 2.5rem;
-        }
+
 }
 
+.container .text {
+    font-size: 3rem;
+    color: var(--text-color);
+    text-align: left;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+
+.container .text .spanText {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+
+.image2 {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    transform: rotate(-10deg);
+    animation: float 3s ease-in-out infinite;
+}
+
+.image3 {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    transform: rotate(10deg);
+    animation: float 3s ease-in-out infinite;
+}
+
+.image4 {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.image5 {
+    position: absolute;
+    top: -70px;
+    right: 40px;
+    transform: rotate(15deg);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+
+    50% {
+        transform: rotate(-2deg);
+    }
+}
