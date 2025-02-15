@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './NavbarItem.module.css'
 
 const NavbarItem = () => {
+
   return (
     <>
       <ul className={styles.nav_items}>
