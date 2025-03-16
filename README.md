@@ -16,4 +16,7 @@ Welcome to **DevCommunity**, a platform where users can share their innovative d
 ### 3. **Navigation Documentation**
 - [Navigation Guide](./docs/NAVIGATION_README.md)
 
+### 4. **Backend Description**
+- [Backend Description](./docs/PRODUCT_DESCRIPTION.md)
+
 
