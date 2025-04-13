@@ -1,26 +1,33 @@
-import React from 'react'
-import { NavTab } from './Components'
-import { 
-  Home, 
-  Login, 
-  Register 
- } from './Pages'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { NavTab } from "./Components";
+import { Home, Login, Register } from "./Pages";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 const App = () => {
   const location = useLocation();
-  const hideNav = location.pathname === '/signin' || location.pathname === '/signup';
+  const hideNav =
+    location.pathname === "/signin" || location.pathname === "/signup";
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  useEffect(() => {
+    checkAuth();
+  }, []);
 
+  const checkAuth = () => {
+    if (document.coookie) {
+      console.log(document.cookie);
+      setIsAuthenticated(true);
+    }
+  };
   return (
     <>
       {!hideNav && <NavTab />}
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/signin' element={<Login/>} />
-        <Route path='/signup' element={<Register/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/signup" element={<Register />} />
       </Routes>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

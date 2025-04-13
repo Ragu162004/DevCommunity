@@ -38,15 +38,9 @@ const register = async (req, res) => {
       await newUser.save();
 
       res.status(201).send({
-        _id: user._id,
-        username: user.username,
-        email: user.email,
-        fullname: user.fullname,
-        followers: user.followers,
-        following: user.following,
-        profileImg: user.profileImg,
         message: "User Created Successfully",
         success: true,
+        user: newUser,
       });
     }
 
@@ -75,15 +69,9 @@ const login = async (req, res) => {
     generateTokenAndSetCookie(user._id, res);
 
     return res.status(200).json({
-      _id: user._id,
-      username: user.username,
-      email: user.email,
-      fullname: user.fullname,
-      followers: user.followers,
-      following: user.following,
-      profileImg: user.profileImg,
       Message: `User ${user.username} logged in successfully`,
       success: true,
+      user: user,
     });
   } catch (error) {
     return res.status(500).json({
