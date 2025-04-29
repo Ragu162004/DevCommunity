@@ -3,6 +3,9 @@ import styles from "./Register.module.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+
+import toast from "react-hot-toast";
+
 const Register = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -37,8 +40,12 @@ const Register = () => {
         withCredentials: true,
       }
     );
-    console.log(response);
-    navigate("/");
+    if(response.status === 201) {
+      toast.success(response.data.message, {
+        position: "top-right"
+      });
+      navigate("/login");
+    }
   };
 
   const toggleShowPassword = () => {
@@ -129,7 +136,7 @@ const Register = () => {
         <button type="submit">Submit</button>
         <div className={styles.haveAccount}>
           <p>
-            Don't Have an account? <Link to={"/signin"}>Click here</Link>
+            Don't Have an account? <Link to={"/login"}>Click here</Link>
           </p>
         </div>
       </form>

@@ -5,11 +5,11 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
 //Establishing Database Connection
-const dbConfig = require("./config/dbConfig");
+const dbConfig = require("./config/db.config");
 
 //importing Contoller
-const userRoutes = require("./routes/userRoutes");
-const authRoutes = require("./routes/authRoutes");
+const userRoutes = require("./routes/user.routes");
+const authRoutes = require("./routes/auth.routes");
 
 //Configuring the .env
 require("dotenv").config();

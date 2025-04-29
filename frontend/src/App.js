@@ -6,25 +6,18 @@ import { Routes, Route, useLocation } from "react-router-dom";
 const App = () => {
   const location = useLocation();
   const hideNav =
-    location.pathname === "/signin" || location.pathname === "/signup";
+    location.pathname === "/login" || location.pathname === "/register";
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   useEffect(() => {
-    checkAuth();
   }, []);
 
-  const checkAuth = () => {
-    if (document.coookie) {
-      console.log(document.cookie);
-      setIsAuthenticated(true);
-    }
-  };
   return (
     <>
       {!hideNav && <NavTab />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<Login />} />
-        <Route path="/signup" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   );

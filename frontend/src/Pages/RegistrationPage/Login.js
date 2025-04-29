@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import styles from "./Login.module.css"; 
-import { FaEye, FaEyeSlash } from "react-icons/fa"; 
+import styles from "./Login.module.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -32,8 +33,18 @@ const Login = () => {
         withCredentials: true,
       }
     );
-    console.log(response);
-    if (response.status === 200) navigate("/");
+    if (response.status === 200) {
+      console.log(response);
+      toast.success(response.data.Message, {
+        position: "top-right",
+      }); 
+      navigate("/");
+    } else {
+      console.log(response);
+      toast.error(response.data.message, {
+        position: "top-right",
+      });
+    }
   };
 
   const handleForgotPassword = () => {
@@ -81,7 +92,7 @@ const Login = () => {
         <button type="submit">Submit</button>
         <div className={styles.haveAccount}>
           <p>
-            Don't Have an account? <Link to={"/signup"}>Click here</Link>
+            Don't Have an account? <Link to={"/register"}>Click here</Link>
           </p>
         </div>
       </form>
