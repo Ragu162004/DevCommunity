@@ -50,4 +50,3 @@ The main objective of this project is to create a platform where users can share
 - JWT Authentication
 - Material UI
 - Sass/Scss
-

@@ -5,12 +5,10 @@ const userSchema = new mongoose.Schema(
     username: {
       type: String,
       required: true,
-      unique: true,
     },
     fullname: {
       type: String,
       required: true,
-      unique: true,
     },
     email: {
       type: String,
@@ -20,6 +18,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       minLength: 6,
+    },
+    role: {
+      type: String,
+      enum: ["dev", "admin"],
+      default: "dev",
     },
     followers: [
       {
@@ -46,7 +49,7 @@ const userSchema = new mongoose.Schema(
     link: {
       type: String,
       required: false,
-    },
+    },  
   },
   {
     timestamps: true,
