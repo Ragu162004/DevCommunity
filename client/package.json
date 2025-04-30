@@ -15,7 +15,6 @@
     "class-variance-authority": "^0.7.1",
     "client": "file:",
     "clsx": "^2.1.1",
-    "daisyui": "^5.0.28",
     "lucide-react": "^0.503.0",
     "path": "^0.12.7",
     "react": "^19.0.0",

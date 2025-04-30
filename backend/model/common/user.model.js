@@ -21,7 +21,8 @@ const userSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      default: "user",
+      enum: ["dev", "admin"],
+      default: "dev",
     },
     followers: [
       {
@@ -48,7 +49,7 @@ const userSchema = new mongoose.Schema(
     link: {
       type: String,
       required: false,
-    },
+    },  
   },
   {
     timestamps: true,

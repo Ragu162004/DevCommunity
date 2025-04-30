@@ -6,7 +6,7 @@ const {
   logout,
   getMe,
 } = require("../controller/auth.controller");
-const authMiddleware = require("../middlewares/auth.middleware");
+const authMiddleware = require("../../middlewares/auth.middleware");
 
 const router = express.Router();
 
