@@ -9,7 +9,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const navigate = useNavigate();
   const handleLogout = async () => {
     const response = await axios.post(

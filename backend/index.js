@@ -8,8 +8,8 @@ const cookieParser = require("cookie-parser");
 const dbConfig = require("./config/db.config");
 
 //importing Contoller
-const userRoutes = require("./routes/user.routes");
-const authRoutes = require("./routes/auth.routes");
+const userRoutes = require("./routes/dev-routes/user.routes");
+const authRoutes = require("./routes/common/auth.routes");
 
 //Configuring the .env
 require("dotenv").config();
